@@ -1,0 +1,7 @@
+.fab-link {
+    @apply border-2 border-grey rounded-full h-8 w-8 flex items-center justify-center;
+}
+
+[class*="fa-"] {
+    @apply text-grey;
+}

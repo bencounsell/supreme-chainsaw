@@ -1,0 +1,17 @@
+.search {
+    transform: translateY(-5px);
+    margin-top: -50px;
+
+    .hasDropdown & {
+        transition: 500ms margin-top, 550ms transform 125ms;
+        margin-top: 0;
+        transform: translateY(0);
+    }
+
+    > svg {
+        position: absolute;
+        top: 50%;
+        left: 10px;
+        transform: translateY(-50%);
+    }
+}

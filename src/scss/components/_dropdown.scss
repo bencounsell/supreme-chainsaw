@@ -1,0 +1,30 @@
+.dropdown {
+    @apply absolute bg-blue w-full z-10;
+    z-index: 1000;
+    max-height: 0;
+    overflow: hidden;
+    transform: translateY(-10px);
+
+    > .grid {
+        opacity: 0;
+    }
+
+    .hasDropdown & {
+        transition: 550ms;
+        max-height: 60vh;
+        transform: translateY(0);
+
+        > .grid {
+            transition: 350ms;
+            opacity: 1;
+        }
+    }
+
+    &-link {
+        @apply text-sm text-blue-lightest no-underline tracking-wide;
+    }
+
+    &-title {
+        @apply mb-2 text-white uppercase text-sm tracking-wider;
+    }
+}

@@ -1,0 +1,55 @@
+@tailwind preflight;
+
+/**
+ * Components
+ */
+@tailwind components;
+
+@import "components/dropdown";
+@import "components/fab";
+@import "components/grid";
+@import "components/search";
+
+/**
+ * Utils / Helpers
+ */
+@tailwind utilities;
+
+/* This is hacky and with more time I would have presented better technical solution!
+ * The issue is with the navbar search box interfering with the main content postion.
+ * Ideally we would have used position: sticky; on the header as it's more performant
+ * on mobile. Probably best we discuss this further in person ;)
+*/
+.main {
+    margin-top: 74px;
+}
+
+.arrow {
+    @apply border-black;
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid;
+}
+
+.payment-card {
+    width: ceil(128px/3);
+    height: ceil(80px/3);
+}
+
+.bordered {
+    @apply py-5 border-t border-b border-grey-lighter;
+}
+
+.text-inherit {
+    color: inherit;
+}
+
+.leading-0 {
+    line-height: 0;
+}
+
+.-transY-1 {
+    transform: translateY(-1px);
+}

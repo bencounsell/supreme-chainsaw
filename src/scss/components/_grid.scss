@@ -1,0 +1,32 @@
+.grid {
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns:
+        [bleed-start] 15px
+        [widest-start left-start] auto
+        [left-end right-start] auto
+        [widest-end right-end] 15px
+        [bleed-end];
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 15px;
+    grid-row-gap: 25px;
+    padding: 0 15px;
+
+        .bleed {
+            grid-column: span 2;
+            margin-left: -15px;
+            margin-right: -15px;
+        }
+
+        .content {
+            grid-column: span 2;
+        }
+
+        .full {
+            grid-column: span 2;
+        }
+
+        .row-gap-0 {
+            grid-row-gap: 0;
+        }
+}
